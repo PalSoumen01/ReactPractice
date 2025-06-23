@@ -1,0 +1,47 @@
+What is the react hook?
+--> A React Hook is a specialized function that allows functional components to directly 
+access React features such as state and lifecycle methods. Essentially, it provides a way 
+for functional components to manage their internal state and handle side effects, something
+previously limited to class components. Hooks enable a more concise and reusable code 
+structure, making it possible to build entire applications primarily with functional 
+components.
+
+What is reconciliation?
+---> Reconciliation is the process through which React updates the Browser DOM and makes 
+React work faster. React uses a diffing algorithm so that component updates are predictable
+and faster. React would first calculate the difference between the real DOM and the copy of
+DOM (Virtual DOM) when there's an update of components. React stores a copy of Browser DOM 
+which is called Virtual DOM. When we make changes or add data, React creates a new Virtual DOM
+and compares it with the previous one. This comparison is done by the Diffing Algorithm. 
+Now React compares the Virtual DOM with Real DOM. It finds out the changed nodes and updates
+only the changed nodes in Real DOM leaving the rest nodes as it is. This process is called 
+Reconciliation.
+
+What is the difference between useMemo and useCallback?
+--> useMemo caches the return value of a function. useCallback caches the function 
+definition itself.
+
+useMemo is used when you have an expensive calculation you want to avoid on every render.
+useCallback is used to cache a function to avoid re-creating it on every re-render.
+
+useMemo makes sure that an expensive function should only be called for state values 
+dependent on it.
+useCallback creates stable functions that maintain the same reference between renders. 
+This avoids unnecessary rendering of child components.
+
+What is React Router?
+--> React Router is a library for handling routing and navigation in React JS Applications.
+It enables navigation in a single-page application (SPA) without refreshing the entire page.
+
+What are the different types of routers in React Router v6?
+i. BrowserRouter: The BrowserRouter is the most commonly used router for modern React 
+    applications. It uses the HTML5 History API to manage routing, which allows the URL to be 
+    dynamically updated while ensuring the browser's address bar and history are in sync.
+
+ii. HashRouter: The HashRouter is useful when you want to use a URL hash (#) for routing, 
+    rather than the HTML5 history API. It doesn't require server configuration and works even 
+    if the server doesn't support URL rewriting.
+
+iii. MemoryRouter: The MemoryRouter is used in non-browser environments, such as in React 
+    Native or when running tests.
+
